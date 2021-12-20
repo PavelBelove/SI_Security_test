@@ -13,7 +13,7 @@ ACTION_UNLOAD = 'выгрузить'
 # def analyse(program: list[tuple[str, x]], klnvejer: list[int]) → int
 
 
-def analyse(program, conveyor=[]):
+def analyse(program, conveyor=()):
     """The function calculates the minimum consumed energy
 
     : param program: list with tuples (command, mailbox number)
@@ -35,7 +35,7 @@ def analyse(program, conveyor=[]):
 
     energy = 0
     nums = [i[1] for i in program]
-    conveyor_copy = conveyor[:]
+    conveyor_copy = list(conveyor[:])
 
     for i, comand in enumerate(program):
         if comand[0].lower() == ACTION_ACCEPT and comand[1] in nums[(i + 1):]:

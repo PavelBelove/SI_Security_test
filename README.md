@@ -31,7 +31,7 @@
 
 #### Сигнатура функции:
 
-def analyse(program: list[tuple[str, x]], klnvejer: list[int]) → int
+def analyse(program: list[tuple[str, x]], conveyor: list[int]) → int
 
 ## Задача 2
 Производитель крутых хакерских ноутбуков объявил о рекламной
