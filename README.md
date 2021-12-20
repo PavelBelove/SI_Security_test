@@ -31,7 +31,7 @@
 
 #### Сигнатура функции:
 
-def analyse(programm: list[tuple[str, x]] → int
+def analyse(program: list[tuple[str, x]], klnvejer: list[int]) → int
 
 ## Задача 2
 Производитель крутых хакерских ноутбуков объявил о рекламной
@@ -53,4 +53,4 @@ def analyse(programm: list[tuple[str, x]] → int
 
 #### Сигнатура функции:
 
-def calculate(m: int, n: int, p: list[int])
+def calculate(m: int, n: int, p: list[int]) → int

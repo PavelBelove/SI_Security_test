@@ -1,5 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.join(sys.path[0], '../'))
+print(sys.path[0])
+
 import pytest
-from task2 import calculate
+from scripts.task2 import calculate
+
 
 @pytest.mark.parametrize('m, n, bonus_list, max_bonus', [
     (3, 0, [6, 2, 1], 12),
@@ -15,12 +21,14 @@ from task2 import calculate
 def test_calculate_good(m, n, bonus_list, max_bonus):
     assert calculate(m, n, bonus_list) == max_bonus
 
+
 @pytest.mark.parametrize('m, n, bonus_list, max_bonus', [
     (3, 4, [6, 2, 1], 12),
 ])
 def test_calculate_index_error(m, n, bonus_list, max_bonus):
-    with pytest.raises(IndexError):    
+    with pytest.raises(IndexError):
         assert calculate(m, n, bonus_list) == max_bonus
+
 
 def test_calculate_value_error():
     with pytest.raises(TypeError):
